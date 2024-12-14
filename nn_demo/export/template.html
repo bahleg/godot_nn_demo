@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.26.3/full/pyodide.js"></script>
+        <meta charset="UTF-8">
+  </head>
+  <body>
+      <script type="text/javascript">
+      async function main(){
+        let pyodide = await loadPyodide();
+        pyodide.runPython("print('pyodide is loaded, loading numpy')");
+        await pyodide.loadPackage("numpy") 
+        pyodide.runPython("print('numpy is loaded, adding scripts')");
+        pyodide.runPython(`from pathlib import Path`);
+        
+        CODE
+        
+        
+        
+        pyodide.runPython("print ('scripts are loaded, running')");
+        pyodide.runPython("from server import run");
+        return pyodide;
+      }
+      let pyodideReadyPromise = main();
+      let pyodideInstance;
+      pyodideReadyPromise.then((pyodide) => {
+        pyodideInstance = pyodide;
+    });
+
+      function run_py(cmd) {
+            console.log('run: '+cmd)
+            return pyodideInstance.runPython(cmd); 
+            }
+
+    </script>
+    
+  <canvas id="canvas"></canvas>
+    <script src="$GODOT_URL"></script>
+    <script>
+        var engine = new Engine($GODOT_CONFIG);
+        engine.startGame();
+    </script>
+  </body>
+</html>
+
+

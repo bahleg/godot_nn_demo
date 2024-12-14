@@ -1,0 +1,3 @@
+[submodule "export/teenygrad"]
+	path = export/teenygrad
+	url = https://github.com/tinygrad/teenygrad.git
