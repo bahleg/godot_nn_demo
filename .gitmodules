@@ -1,3 +1,0 @@
-[submodule "export/teenygrad"]
-	path = nn_demo/export/teenygrad
-	url = https://github.com/tinygrad/teenygrad.git
