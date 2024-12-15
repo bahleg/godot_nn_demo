@@ -28,10 +28,6 @@ def run(post_data):
             y = Tensor([0]*len(x1) + [1] * len(x2))
             model = Model()
             
-   
-            # setting SGD with quite aggressive learning rate
-            opt = optim.SGD([model.w, model.b], lr=1.0)
-               
             # setting SGD with quite aggressive learning rate
             opt = optim.SGD([model.w, model.b], lr=1.0)
             criterion = Tensor.binary_crossentropy_logits
