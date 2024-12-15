@@ -16,4 +16,6 @@ This will create an `filled_template.html` file that can be used for shell in Go
 
 3. Load godot project, select `filled_template.html` as HTML shell in the export page and perform export.
 
-[The demo can be found here](https://bahleg.itch.io/nn-godot)
+[The demo can be found here](https://bahleg.itch.io/nn-godot).
+
+[Article on medium](https://medium.com/@bahleg/godot-html5-and-neural-networks-yet-another-way-to-reinvent-the-wheel-45461d56d0b5).
